@@ -8,7 +8,7 @@ import {
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import BasicComponent from './src/BasicComponent';
-
+import ExerciseAndSol from './src/ExerciseAndSol';
 
 const Section = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -23,7 +23,8 @@ const App = () => {
 
   return (
     <>
-    <BasicComponent />
+    {/* <BasicComponent />   Disable the comment line to show Basic Component */}
+    <ExerciseAndSol></ExerciseAndSol>
     </>
   );
 };
