@@ -23,7 +23,6 @@ const App = () => {
   return (
     <>
     <StackNavigation></StackNavigation>
-    <Text>Hellow World</Text>
     </>
   );
 };

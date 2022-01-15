@@ -5,8 +5,8 @@ import { StyleSheet, Text,View,Button, Pressable} from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import ScreenA from './ScreenA';
-import ScreenB from './ScreenB';
+import Home from './Home';  
+import ImageScreen from './ImageScreen';  
 
 const Stack = createStackNavigator(); 
 
@@ -56,13 +56,13 @@ const StackNavigation = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
-                name = "Screen_A"
-                component = {ScreenA}
+                name = "Home"
+                component = {Home}
                 />
 
                 <Stack.Screen
-                name = "Screen_B"
-                component = {ScreenB}
+                name = "Image"
+                component = {ImageScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>
