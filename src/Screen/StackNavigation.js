@@ -5,46 +5,51 @@ import { StyleSheet, Text,View,Button, Pressable} from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import ScreenA from './ScreenA';
+import ScreenB from './ScreenB';
+
 const Stack = createStackNavigator(); 
 
-function ScreenA({navigation}){
-    const onPressHandler = () =>{
-        navigation.navigate('Screen_B');
-    }
-    return (
-        <View style = {styles.body}>
-            <Text style = {styles.text}>
-                Screen A
-            </Text>
-            <Pressable 
-            onPress={onPressHandler}
-            style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
-                 <Text style = {styles.text}>Go to Screen B</Text>
-            </Pressable>
-        </View>
-    );
-};
+//If you want to run it in same page then uncomment these lines
+
+// function ScreenA({navigation}){
+//     const onPressHandler = () =>{
+//         navigation.navigate('Screen_B');
+//     }
+//     return (
+//         <View style = {styles.body}>
+//             <Text style = {styles.text}>
+//                 Screen A
+//             </Text>
+//             <Pressable 
+//             onPress={onPressHandler}
+//             style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
+//                  <Text style = {styles.text}>Go to Screen B</Text>
+//             </Pressable>
+//         </View>
+//     );
+// };
 
 
-function ScreenB({navigation}){
-    const onPressHandler = () =>{
-        navigation.navigate('Screen_A');
-    }
+// function ScreenB({navigation}){
+//     const onPressHandler = () =>{
+//         navigation.navigate('Screen_A');
+//     }
 
-    return (
-        <View style = {styles.body}>
-            <Text style = {styles.text}>
-                Screen B
-            </Text>
+//     return (
+//         <View style = {styles.body}>
+//             <Text style = {styles.text}>
+//                 Screen B
+//             </Text>
 
-            <Pressable 
-            onPress={onPressHandler}
-            style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
-                 <Text style = {styles.text}>Go Back to Screen A</Text>
-            </Pressable>
-        </View>
-    )
-}
+//             <Pressable 
+//             onPress={onPressHandler}
+//             style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
+//                  <Text style = {styles.text}>Go Back to Screen A</Text>
+//             </Pressable>
+//         </View>
+//     )
+// }
 //Creation of navigation
 const StackNavigation = () => {
     return (
