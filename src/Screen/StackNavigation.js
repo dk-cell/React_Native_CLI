@@ -56,12 +56,12 @@ const StackNavigation = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
-                name = "Screen_A"
+                name = "Home"
                 component = {ScreenA}
                 />
 
                 <Stack.Screen
-                name = "Screen_B"
+                name = "Image"
                 component = {ScreenB}
                 />
             </Stack.Navigator>
