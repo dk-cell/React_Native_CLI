@@ -4,17 +4,17 @@ import { StyleSheet, Text,View,Button, Pressable} from 'react-native'
 
 export default function ScreenA({navigation}){
     const onPressHandler = () =>{
-        navigation.navigate('Image');
+        navigation.navigate('Screen_B');
     }
     return (
         <View style = {styles.body}>
             <Text style = {styles.text}>
-                Home
+                Screen A
             </Text>
             <Pressable 
             onPress={onPressHandler}
             style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
-                 <Text style = {styles.text}>Go to Image Screen</Text>
+                 <Text style = {styles.text}>Go to Screen B</Text>
             </Pressable>
         </View>
     );

@@ -9,19 +9,19 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 export default function ScreenB({navigation}){
     const onPressHandler = () =>{
-        navigation.navigate('Home');
+        navigation.navigate('Screen_A');
     }
 
     return (
         <View style = {styles.body}>
             <Text style = {styles.text}>
-                Image
+                Screen B
             </Text>
 
             <Pressable 
             onPress={onPressHandler}
             style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
-                 <Text style = {styles.text}>Go Back to Home</Text>
+                 <Text style = {styles.text}>Go Back to Screen A</Text>
             </Pressable>
         </View>
     );
