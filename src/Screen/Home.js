@@ -15,6 +15,10 @@ export default function Home({navigation}){
     const goToTextScreen = () =>{
         navigation.navigate('TextScreen');
     }
+
+    const goToBoxScreen = () =>{
+        navigation.navigate('BoxScreen');
+    }
     return (
         <View style = {styles.body}>
             <Text style = {styles.text}>
@@ -24,6 +28,7 @@ export default function Home({navigation}){
             <Button title='Go to Color Screen' onPress={goToColorScreen} />
             <Button title='Make Color' onPress={goToSquareScreen} />
             <Button title='Go to Text Screen' onPress={goToTextScreen} />
+            <Button title='Go to Box Screen' onPress={goToBoxScreen} />
 
             {/* <Pressable 
             onPress={onPressHandler}
