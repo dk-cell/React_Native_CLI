@@ -6,64 +6,22 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './Home';  
-import ImageScreen from './ImageScreen';  
+import ImageScreen from './CounterScreen';  
+import ColorScreen from './ColorScreen';
+import SquareScreen from './SquareScreen';
+import TextScreen from './TextScreen';
 
 const Stack = createStackNavigator(); 
-
-//If you want to run it in same page then uncomment these lines
-
-// function ScreenA({navigation}){
-//     const onPressHandler = () =>{
-//         navigation.navigate('Screen_B');
-//     }
-//     return (
-//         <View style = {styles.body}>
-//             <Text style = {styles.text}>
-//                 Screen A
-//             </Text>
-//             <Pressable 
-//             onPress={onPressHandler}
-//             style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
-//                  <Text style = {styles.text}>Go to Screen B</Text>
-//             </Pressable>
-//         </View>
-//     );
-// };
-
-
-// function ScreenB({navigation}){
-//     const onPressHandler = () =>{
-//         navigation.navigate('Screen_A');
-//     }
-
-//     return (
-//         <View style = {styles.body}>
-//             <Text style = {styles.text}>
-//                 Screen B
-//             </Text>
-
-//             <Pressable 
-//             onPress={onPressHandler}
-//             style = {({pressed}) => ({backgroundColor : pressed? '#ddd' : '#4AB91D'})}>
-//                  <Text style = {styles.text}>Go Back to Screen A</Text>
-//             </Pressable>
-//         </View>
-//     )
-// }
 //Creation of navigation
 const StackNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen
-                name = "Home"
-                component = {Home}
-                />
-
-                <Stack.Screen
-                name = "Image"
-                component = {ImageScreen}
-                />
+                <Stack.Screen name = "Home" component = {Home} />
+                <Stack.Screen name = "Image" component = {ImageScreen}/>
+                <Stack.Screen name = "ColorScreen" component = {ColorScreen} />
+                <Stack.Screen name = "SquareScreen" component = {SquareScreen} />
+                <Stack.Screen name = "TextScreen" component = {TextScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
